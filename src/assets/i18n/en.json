@@ -1,4 +1,9 @@
 {
     "title": "Hello World!",
-    "getting_started": "Here are some links to help you start: "
+    "getting_started": "Here are some links to help you start: ",
+
+    "getting.started": "Here are some links to help you start: ",
+    "HOME.SELECT": "Change language",
+    "main.description": "description for main object",
+    "link.first": "first link with <span>span element</span>"
 }

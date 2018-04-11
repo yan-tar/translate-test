@@ -4,6 +4,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PhraseAppCompiler } from "ngx-translate-phraseapp";
+import { TranslateMessageFormatCompiler } from 'ngx-translate-messageformat-compiler';
 
 
 import { AppComponent } from './app.component';
@@ -25,11 +26,16 @@ export function HttpLoaderFactory(http: HttpClient) {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
-      },
+      }, 
       compiler: {
         provide: TranslateCompiler,
-        useClass: PhraseAppCompiler
+        useClass: TranslateMessageFormatCompiler
       }
+      // ,
+      // compiler: {
+      //   provide: TranslateCompiler,
+      //   useClass: PhraseAppCompiler
+      // }
     }),
   ],
   providers: [],

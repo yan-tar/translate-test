@@ -1,0 +1,8 @@
+version: '2'
+services:
+  translate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
